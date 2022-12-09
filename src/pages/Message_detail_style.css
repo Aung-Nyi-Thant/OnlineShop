@@ -1,0 +1,36 @@
+.message_detail {
+    width: 700px;
+    height: 800px;
+    background-color: bisque;
+    padding-top: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+}
+
+.messageDiv1 {
+    text-align: center;
+    width: 260px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.Name_ {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Foodname__ {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 80px;
+}
+
+.cost__ {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 80px;
+}
+
+.count__ {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 80px;
+}

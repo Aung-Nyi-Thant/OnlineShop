@@ -1,0 +1,57 @@
+.CardId {
+    border: none;
+    margin-top: 150px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+.CardPassword {
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+.Main_Card {
+    width: 600px;
+    height: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2)
+}
+
+.CardLabel {
+    color: black;
+}
+
+.costs {
+    color: black;
+}
+
+.costs {
+    color: black;
+    margin-right: 150px;
+}
+
+.Title_Card {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.confirmBtn {
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+}
+
+.Card {
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2)
+}

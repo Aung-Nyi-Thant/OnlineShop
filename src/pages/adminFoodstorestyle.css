@@ -1,0 +1,175 @@
+.Foodname {
+    border-top: none;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.FoodPrice {
+    border-top: none;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+    margin-top: 70px;
+}
+
+.FoodImage {
+    border-top: none;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: 70px;
+}
+
+.FoodTaste {
+    border-top: none;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    margin-right: 25px;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+    margin-top: 70px;
+}
+
+.FoodBrand {
+    border-top: none;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 70px;
+}
+
+.FoodAgeLimit {
+    border-top: none;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    margin-right: 19px;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 70px;
+}
+
+.SubmitBtn {
+    background-color: gray;
+    width: 120px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 70px;
+    border-color: white;
+    border: none;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.expireDate {
+    border-top: none;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    margin-right: 19px;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+    margin-left: 25px;
+    margin-top: 70px;
+}
+
+.country {
+    border-top: none;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    margin-right: 19px;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-top: 60px;
+}
+
+.Label_6 {
+    margin: 0 auto;
+}
+
+.Label_5 {
+    margin-right: 10px;
+}
+
+
+/* .Label_4{
+    margin-left: 120px;
+} */
+
+.Label_3 {
+    margin-right: 10px;
+}
+
+.Label_2 {
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.AdminHome {
+    background-color: #4aa55e;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding-top: 20px;
+}
+
+.Admin_title {
+    margin-left: 480px;
+    margin-right: 580px;
+    background-color: white;
+    width: 140px;
+    border-radius: 20px;
+    height: 50px;
+}
+
+.Selcet {
+    background-color: gray;
+    margin-right: 120px;
+    margin-top: 20px;
+}
+
+.Title__ {
+    width: 120px;
+    font-family: Arial Rounded MT Bold;
+}
+
+.Billioner_ {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.OnlineShop {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Message {
+    margin-right: 5px;
+    margin-top: 10px;
+}

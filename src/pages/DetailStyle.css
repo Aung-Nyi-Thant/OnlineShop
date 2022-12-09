@@ -1,0 +1,46 @@
+.Main__{
+    width: 1450px;
+    height: 800px;
+    background-size: 1450px;
+    padding-top: 20px;
+}
+.Detail_{
+    width: 600px;
+    height: 750px;
+    margin-left: 450px;
+    opacity: 0.9;
+    border-radius: 20px;
+    padding-top: 20px;
+}
+.detail_title{
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 100px;
+
+}
+.detail_year{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.summary_div{
+    color: white;
+    text-align:inherit ;
+    width: auto;
+    margin-top: 100px;
+    margin-left: 50px;
+    border: #472484 solid 1px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.summary{
+    font-family: Luminari, fantasy;
+    letter-spacing: 1px;
+}
+.Download{
+    border-radius: 20px;
+    border: none;
+    background-color: #00ADB5;
+    height: 40px;
+    width: 100px;
+    margin-top: 20px;
+}

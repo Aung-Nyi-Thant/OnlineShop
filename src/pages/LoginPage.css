@@ -1,0 +1,121 @@
+.Username_input {
+    border-top: none;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    margin-right: 25px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 200px;
+}
+
+.Login_page_main {
+    background-image: url("https://swall.teahub.io/photos/small/126-1269214_website-backgrounds.jpg");
+    width: 1430px;
+    height: 820px;
+    background-size: 1430px 820px;
+    padding-top: 20px;
+}
+
+.child_Login {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    margin: 0 auto;
+    padding-top: 40px;
+    border-radius: 20px;
+}
+
+.Password_input {
+    border-top: none;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    margin-right: 25px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 200px;
+}
+
+.UserPhoto {
+    border-radius: 300px;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.Login_button {
+    background-color: #ed5684;
+    width: 300px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 1px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border-color: white;
+    padding-top: 10px;
+    border: none;
+}
+
+.Login_text {
+    color: white;
+    font-family: DejaVu Sans Mono, monospace;
+}
+
+.Alert_box {
+    width: 300px;
+    height: 400px;
+    background-color: #00ADB5;
+}
+
+.Errormessage {
+    margin-top: 15px;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Sign {
+    width: 100px;
+    height: 50px;
+    background-color: #00ADB5;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+    margin-top: 1px;
+    margin-left: 1340px;
+}
+
+.Sign_text {
+    color: white;
+    padding-top: 10px;
+}
+
+.Forgoth6 {
+    margin-top: 5px;
+    margin-left: 180px;
+    font-size: 15px;
+    color: #9b9898;
+    font-family: Helvetica, sans-serif;
+}
+
+.Forgoth6:hover {
+    color: #444444;
+    text-decoration-line: underline;
+}
+
+.UsernameOfLabel {
+    margin-right: 3px;
+    font-family: DejaVu Sans Mono, monospace;
+}
+
+.PasswordOfLabel {
+    margin-right: 3px;
+    font-family: DejaVu Sans Mono, monospace;
+}
+
+::placeholder {
+    font-family: DejaVu Sans Mono, monospace;
+    margin: 0 auto;
+}

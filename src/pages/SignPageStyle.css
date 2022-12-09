@@ -1,0 +1,96 @@
+.FirsrName {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    background-color: white;
+    margin-left: 5px;
+    outline: none;
+    border-color: #00ADB5;
+}
+
+.SignPage {
+    width: 500px;
+    background-color: white;
+    height: 700px;
+    border-radius: 20px;
+    margin-left: 500px;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.SignMainPage {
+    background-color: #00ADB5;
+    height: 820px;
+    padding-top: 40px;
+}
+
+.label {
+    color: #00ADB5;
+    margin-right: 40px;
+}
+
+.LatestName {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 10px;
+    margin-top: 60px;
+    background-color: white;
+    margin-left: 5px;
+    outline: none;
+    border-color: #00ADB5;
+}
+
+.Age {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 10px;
+    margin-top: 60px;
+    background-color: white;
+    margin-left: 20px;
+    outline: none;
+    border-color: #00ADB5;
+}
+
+.labelAge {
+    color: #00ADB5;
+    margin-right: 60px;
+}
+
+.Password {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 10px;
+    background-color: white;
+    margin-left: 10px;
+    outline: none;
+    border-color: #00ADB5;
+    margin-top: 70px;
+}
+
+.SignIn_btn {
+    background-color: #00ADB5;
+    border: none;
+    border-radius: 15px;
+    width: 85px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.SignIn_btn:hover {
+    background-color: blue;
+}
+
+.Signtxt {
+    color: white;
+    margin-top: 10px;
+}
+
+.tt_creative {
+    color: #00ADB5;
+    margin-right: 250px;
+}

@@ -1,0 +1,18 @@
+.comtand_main {
+    width: 1400px;
+    height: 100px;
+    background-color: bisque;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+    padding-top: 3px;
+}
+
+.Username_ {
+    margin-right: 1150px;
+}
+
+.Password_ {
+    margin-right: 1100px;
+    margin-top: 15px;
+}

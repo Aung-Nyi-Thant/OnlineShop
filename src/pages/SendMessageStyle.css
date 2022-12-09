@@ -1,0 +1,45 @@
+.sendMessagediv {
+    width: 1000px;
+    height: 700px;
+    background-color: wheat;
+    margin-top: 20px;
+    margin-left: 250px;
+    border-radius: 10px;
+    padding-top: 50px;
+}
+
+.messageTitle {
+    text-align: 1px;
+    letter-spacing: 1px;
+}
+
+.t1 {
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.MessageInput {
+    margin-top: 250px;
+    border-radius: 10px;
+    border-color: white;
+}
+
+.SendBtn {
+    width: 80px;
+    border-radius: 5px;
+    border-color: #106cf6;
+    color: #106cf6;
+    margin-left: 10px;
+}
+
+.SendBtn:hover {
+    background-color: #106cf6;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.ErrMessage {
+    margin-top: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+}

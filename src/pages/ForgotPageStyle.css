@@ -1,0 +1,99 @@
+.mainForgot {
+    background-color: #49adb6;
+    width: 1440px;
+    height: 850px;
+    padding-top: 40px;
+}
+
+.childforgot {
+    background-color: white;
+    width: 500px;
+    height: 750px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+.TitleForgot {
+    color: #49adb6;
+}
+
+.emailInput {
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    border: 1px solid #5d94f7;
+    margin-top: 190px;
+}
+
+.Serchclick {
+    border: 1px solid #5d94f7;
+    width: 70px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.Serchclick :hover {
+    background-color: #5d94f7;
+    color: white;
+}
+
+.userdiv {
+    width: 450px;
+    background-color: #49adb6;
+    margin-left: 20px;
+    margin-top: 150px;
+    height: 90px;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+.userdiv:hover {
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2)
+}
+
+.Username_acc {
+    margin-right: 280px;
+    font-family: Angsana New;
+    width: 200px;
+}
+
+.Password_acc {
+    margin-right: 240px;
+    font-family: Angsana New;
+    margin-top: 15px;
+}
+
+.Acc {
+    margin-top: 60px;
+    font-family: Andale Mono;
+}
+
+.text3 {
+    font-family: Angsana New;
+    margin-top: 50px;
+}
+
+.codeComfig {
+    border-radius: 5px;
+    background-color: #49adb6;
+    border: none;
+    margin-top: 200px;
+}
+
+::placeholder {
+    color: white;
+}
+
+.enterBtn {
+    margin-top: 20px;
+    border: 1px solid #106cf6;
+    width: 100px;
+    border-radius: 5px;
+    color: #106cf6;
+}
+
+.enterBtn:hover {
+    background-color: #106cf6;
+    color: white;
+}

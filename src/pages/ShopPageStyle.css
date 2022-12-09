@@ -1,0 +1,181 @@
+.input-group {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.form-control:hover {
+    border-color: #106cf6;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.animation {
+    width: 400px;
+    background-color: aquamarine;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.commandDiv {
+    background-color: white;
+    width: 200px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.SerchInput {
+    border-radius: 5px;
+    border-color: white;
+    margin-bottom: 10px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.SerchboxDiv {
+    margin-right: 1100px;
+}
+
+
+/* .child{
+    width: 10px;
+    height: 30px;
+    background-color: black;
+    transition: 3s;
+    border-radius: 10px;
+}
+.child:hover{
+    width: 400px;
+    background-color: brown;
+} */
+
+.CookedBtn {
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: #146ef6;
+    border: 1px solid #146ef6;
+    background-color: white;
+}
+
+.CookedBtn:hover {
+    background-color: #146ef6;
+    color: white;
+}
+
+.profile {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50px;
+    margin-left: 10px;
+    background-image: url("data:image/jpeg;base64,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");
+    background-size: 50px 50px;
+}
+
+.Metbtn {
+    height: 30px;
+    width: 80px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: #146ef6;
+    border: 1px solid #146ef6;
+    background-color: white;
+    margin-left: 120px;
+    letter-spacing: 1px;
+    margin-right: 1160px;
+}
+
+.Metbtn:hover {
+    background-color: #146ef6;
+    color: white;
+}
+
+.form {
+    position: relative;
+    width: 380px;
+    margin-right: 630px;
+}
+
+.form .fa-search {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #9ca3af;
+}
+
+.buttonClothes {
+    background-color: white;
+    border-radius: 3px;
+    border: none;
+    background-color: #106cf6;
+    color: white;
+}
+
+.buttonClothes :hover {
+    background-color: #106cf6;
+    color: white;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.buttonGame {
+    background-color: white;
+    border-radius: 3px;
+    border: none;
+    background-color: #106cf6;
+    color: white;
+    margin-left: 20px;
+    margin-right: 1220px;
+}
+
+.buttonFood {
+    background-color: white;
+    border-radius: 3px;
+    border: none;
+    background-color: #106cf6;
+    color: white;
+    margin-left: 20px;
+}
+
+.buttonFood:hover {
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.buttonGame:hover {
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.col-md-6 {
+    margin-left: 20px;
+}
+
+.form span {
+    position: absolute;
+    right: 17px;
+    top: 12px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db;
+}
+
+.left-pan {
+    padding-left: 7px;
+}
+
+.left-pan i {
+    padding-left: 10px;
+}
+
+.form-input {
+    height: 45px;
+    text-indent: 33px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-input:focus {
+    box-shadow: none;
+    border: none;
+}

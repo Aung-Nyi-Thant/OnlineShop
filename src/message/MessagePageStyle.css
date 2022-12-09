@@ -1,0 +1,71 @@
+.message_div {
+    width: 1400px;
+    height: 200px;
+    background-color: white;
+    text-align: start;
+    border-radius: 10px;
+    margin-left: 20px;
+    padding-top: 10px;
+    margin-top: 20px;
+    padding-left: 10px;
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2)
+}
+
+.Image__ {
+    width: 170px;
+    height: 170px;
+    float: left;
+    background-size: 170px 170px;
+    margin-top: 0px;
+    border-radius: 10px;
+}
+
+.MessageName {
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 10px;
+}
+
+.MessageFood {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Messagecount {
+    margin-left: 40px;
+    margin-top: 40px;
+    width: 290px;
+    height: 60px;
+    font-family: Courier New, monospace;
+    letter-spacing: 1px;
+}
+
+.messageDiv {
+    text-align: center;
+    padding-left: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.OpenBtn {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 80px;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.DeleteBtn {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 80px;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.date__ {
+    margin-left: 20px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+}

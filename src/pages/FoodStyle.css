@@ -1,0 +1,161 @@
+.Food_image {
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    float: left;
+    margin-left: 20px;
+    background-size: 600px 600px;
+    border-radius: 20px;
+    margin-top: 100px;
+}
+
+.Food_detail {
+    float: left;
+    background-color: brown;
+    width: 300px;
+    margin-left: 900px;
+    margin-bottom: 200px;
+}
+
+.length_of_food {
+    width: 70px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
+    margin-right: 5px;
+}
+
+.button_buy {
+    width: 70px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.errorMessage {
+    color: red;
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+
+.Food_image::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.messageBox {
+    background-color: white;
+    border-radius: 5px;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mainFoodDetail {
+    float: left;
+}
+
+.BackButton {
+    background-color: rgb(95, 199, 194);
+    width: 90px;
+    height: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-left: 50px;
+    margin-top: 10px;
+    border: none;
+}
+
+.serch {
+    border-radius: 10px;
+    border-color: black;
+    margin-top: 20px;
+}
+
+.serchLabel {
+    margin-right: 10px;
+}
+
+.profile_photo {
+    float: left;
+    width: 550px;
+    height: 550px;
+    background-image: url("https://media.istockphoto.com/vectors/loading-icon-vector-illustration-vector-id1335247217?k=20&m=1335247217&s=612x612&w=0&h=CQFY4NO0j2qc6kf4rTc0wTKYWL-9w5ldu-wF8D4oUBk=");
+    margin-left: 10px;
+    margin-top: 150px;
+    background-image: url("https://i.pinimg.com/736x/8f/35/28/8f35281e742e71be09697e7e6789b819.jpg");
+    background-size: 550px 550px;
+    border-radius: 20px;
+    transition: 2s;
+}
+
+.profile_photo:hover {
+    background-size: 600px 600px;
+}
+
+.main_profile::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.Info {
+    float: left;
+}
+
+.Text {
+    margin-top: 20px;
+    margin-left: 700px;
+    font-family: OCR A Std, monospace;
+}
+
+.Text_title {
+    margin-top: 30px;
+    margin-left: 700px;
+    font-family: Helvetica, sans-serif;
+}
+
+.all_Info {
+    width: 440px;
+    height: 575px;
+    float: left;
+    margin-left: 300px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.Ifo_text {
+    color: black;
+    font-family: DejaVu Sans Mono, monospace;
+    margin-top: 20px;
+}
+
+.Bio_text {
+    color: black;
+    font-family: Helvetica, sans-serif;
+    margin-top: 20px;
+}
+
+.Ifo_textName {
+    color: white;
+    font-family: DejaVu Sans Mono, monospace;
+}
+
+.testing {
+    color: white;
+    margin-right: 1200px;
+}
+
+.Ifo_textName_Div {
+    text-align: inherit;
+    margin-top: 150px;
+}
+
+::placeholder {
+    color: grey;
+}
