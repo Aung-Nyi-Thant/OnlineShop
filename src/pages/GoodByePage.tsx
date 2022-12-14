@@ -55,7 +55,7 @@ export default function GoodBye(){
             <div className={"Logo__"} onClick={()=>{
             }}></div>
                         <div className="profile" onClick={()=>{
-                navigate(`/:Id/profile`)
+                navigate(`/${Username}/profile`)
             }}></div>
             {/*{
             useAuthentication()

@@ -74,7 +74,7 @@ export default function AdmStore() {
                 navigate("/Aung%20Nyi%20Thant/message")
             }}></i>
                         <div className="profile" onClick={()=>{
-                navigate(`/:Id/profile`)
+                navigate(`/${Username}/profile`)
             }}></div>
             {/*{
             useAuthentication()

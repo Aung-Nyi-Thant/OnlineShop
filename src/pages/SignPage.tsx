@@ -36,34 +36,37 @@ export default function SignPage(){
         var RePassword = (document.getElementById("RePassword") as HTMLInputElement).value;
         var Username = FirstName+LatestName
         let count = 0
+        function stringToHash(string:any) {
+                  
+            var hash = 0;
+            if (string.length == 0) return hash;
+              
+            for (let i = 0; i < string.length; i++) {
+                let char = string.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash;
+            }
+              
+            return hash;
+        }
+        password = String(stringToHash(password))
         var users1:User1={
             userName:Username,
             password:password,
             email:Email,
-            age:Age
+            age:Age,
+            totalMoney:"0",
+            money:1,
+            type_:"normal"
         }
         if (FirstName!=""){
             if(LatestName!=""){
                 if(Age != ""){
                     if(password!=""){
                         if(password==RePassword){
-                            for (let i =0;i<users.length;i++){
-                                console.log(users[i].username)
-                            if(users[i].username != Username){
-                                console.log("!=")
-                                // registerUser(users1)
-                                // console.log("Successful") 
-                                // //for loop error!!! I can do this
-                                // navigate(`/${Username}/home`)
-                            }else if(users[i].username==Username){
-                                //nothing
-                                console.log("=")
-                                count = count+1
-                                alertbox()
-                                window.location.reload()
-                                break
-                            }
-                        }
+                            registerUser(users1)
+                            console.log("Successful") 
+                            navigate(`/${Username}/home`)
                         }
                         if(count == 0){
                             registerUser(users1)

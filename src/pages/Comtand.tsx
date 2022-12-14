@@ -6,55 +6,6 @@ import { apiSaveMessage, Message_ } from "../message/messageSlice";
 import * as Yup from 'yup';
 import { apiGetAllUsers, login, selectUser, Users } from "../features/Login/UsersSlice";
 import ComtandUI from "./ComtandUI";
-const UsersForm = (props:any)=>{
-    let dispatch = useAppDispatch();
-    let users = props.movie;
-    console.log('Edit movie ',users);
-    let handleClose = props.handleClose;
-    let initValues ={
-        _id : users? users._id:'',
-        username: users? users.username:'',
-        password: users? users.password:'',
-        email:users? users.email:'',
-        age:users? users.age:''
-    }
-    return (<div>
-        
-        <Formik
-            initialValues={initValues}
-            onSubmit={values => {
-                // same shape as initial values
-                //console.log("Handle Close ", handleClose);
-                console.log(values);
-
-                if (!users)//save
-                {
-                    let login_users: Users = {
-                        // title: values.title,
-                        // year: Number(values.year),
-                        // image_adress:values.image_adress,
-                        // background_img:values.background_img,
-                        // color:values.color,
-                        // summary:values.summary
-                        _id:values._id,
-                        username: values.username,
-                        password: values.password,
-                        email:'',
-                        age:''
-
-
-                    }
-
-                    console.log('Movie ', login_users);
-                    dispatch(login(login_users));
-                }
-                handleClose();
-            }}
-        >
-        </Formik>
-
-    </div>);
-};
 export default function Comtand(){
     const dispatch = useAppDispatch();
     useEffect(()=>{

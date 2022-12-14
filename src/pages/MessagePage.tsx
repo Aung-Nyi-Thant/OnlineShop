@@ -243,7 +243,7 @@ export default function MessageListPage() {
                 navigate("/Aung%20Nyi%20Thant/message")
             }}></i>
             <div className="profile" onClick={()=>{
-                navigate(`/:Id/profile`)
+                navigate(`/${Username}/profile`)
             }}></div>
             
             {/*{

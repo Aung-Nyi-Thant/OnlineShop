@@ -26,7 +26,10 @@ export default function EaditAcc(){
                         username:user.username,
                         password:ComfigPass,
                         email:user.email,
-                        age:user.age
+                        age:user.age,
+                        totalMoney:user.totalMoney,
+                        money:user.money,
+                        type_:user.type_
                     }
                     UpdateAccount(users)
                     console.log("Successful")

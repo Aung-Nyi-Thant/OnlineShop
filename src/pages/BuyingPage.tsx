@@ -104,7 +104,7 @@ export default function BuyingTheFood(){
                 navigate(`/${Username}/message`)
             }}></i>
                         <div className="profile" onClick={()=>{
-                navigate(`/:Id/profile`)
+                navigate(`/${Username}/profile`)
             }}></div>
             
             {/*{

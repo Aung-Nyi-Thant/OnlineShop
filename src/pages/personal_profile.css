@@ -1,30 +1,181 @@
-.Profile_photo{
-    width: 300px;
-    height: 270px;
-    background-size: 300px 270px;
-    border-radius: 200px;
-    margin-left: 600px;
-    margin-top: 30px;
-    
+.personalProFile {
+    width: 430px;
+    height: 700px;
+    border-radius: 0px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 40px;
+    float: left;
+    margin-left: 80px;
 }
-.Username{
-    color: white;
-    margin-left: 130px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+.main_profile {
+    background-color: #eff0f0;
 }
-.Info_div{
-    background-color: #49adb6;
-    width: 600px;
-    height: 600px;
-    margin-left: 450px;
-    padding-top: 20px;
-    border-radius: 50px;
-    padding-right: 100px;
+
+.BackgroundColor {
+    width: 430px;
+    height: 200px;
+    padding-top: 100px;
+    background-image: url("https://img.freepik.com/premium-vector/abstract-blue-green-gradient-color-effect-background-website-banner-poster-paper-card_120819-307.jpg");
+    background-size: 430px 200px;
+}
+
+.MostBuyFood {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    float: left;
+    margin-left: 50px;
     margin-top: 20px;
-
+    border-radius: 10px;
+    background-size: 80px 80px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.bio{
-    color: white;
-    margin-left: 130px;
 
+.MostBuyClothes {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-size: 80px 80px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.MostBuyGames {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-size: 80px 80px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#h4 {
+    margin: 0px 0;
+}
+
+.Imformation {
+    width: 800px;
+    height: 400px;
+    background-color: white;
+    float: left;
+    margin-left: 80px;
+    margin-top: 40px;
+}
+
+.Messages {
+    width: 160px;
+    height: 70px;
+    padding-top: 20px;
+    float: left;
+    transition: 1s;
+}
+
+.Setting {
+    width: 160px;
+    height: 70px;
+    padding-top: 20px;
+    float: left;
+    transition: 1s;
+}
+
+.SettingText {
+    color: white;
+    margin: 0px 0;
+    font-family: Courier;
+}
+
+.MenuBar {
+    width: 800px;
+    height: 70px;
+    background-color: #eff0f0;
+}
+
+.MessageText {
+    color: white;
+    margin: 0px 0;
+    font-family: Courier;
+    transition: 1s;
+}
+
+.Usermoney {
+    width: 160px;
+    height: 70px;
+    padding-top: 20px;
+    float: left;
+    transition: 1s;
+}
+
+.Money {
+    margin: 0px 0;
+    font-family: Courier;
+    color: white;
+    transition: 1s;
+}
+
+.Logout {
+    width: 160px;
+    height: 70px;
+    background-color: #eff0f0;
+    padding-top: 20px;
+    float: left;
+}
+
+.LogoutText {
+    margin: 0px 0;
+    font-family: Courier;
+    color: black;
+    float: left;
+}
+
+.fa-power-off {
+    float: left;
+    margin-left: 20px;
+    margin-right: 9px;
+    margin-top: 3px;
+}
+
+.PaymentsText {
+    margin: 0px 0;
+    font-family: Courier;
+    color: white;
+    transition: 1s;
+}
+
+.Payments {
+    width: 160px;
+    height: 70px;
+    padding-top: 20px;
+    float: left;
+    transition: 1s;
+}
+
+.profilePhoto {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1946/1946429.png");
+    background-color: #fff;
+    background-size: 200px 200px;
+    margin-left: 120px;
+}
+
+.UsernameInProfile {
+    margin: 0px 0;
+    margin-top: 25px;
+    font-family: Courier;
+    margin-left: 30px;
+}
+
+.EmailInProfile {
+    font-family: Gautami;
+    margin-left: 25px;
+    margin-bottom: 25px;
 }

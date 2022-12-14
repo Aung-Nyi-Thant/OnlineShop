@@ -15,14 +15,20 @@ export interface Users {
     username:string,
     password:string,
     email:string,
-    age:string
+    age:string,
+    money:number,
+    totalMoney:string,
+    type_:string
 };
 export interface User1 {
-    id?:string,
+    _id? : string,
     userName:string,
     password:string,
     email:string,
-    age:string
+    age:string,
+    money:number,
+    totalMoney:string,
+    type_:string
 }
 export interface users {
     users: Array<Users>
@@ -35,7 +41,10 @@ const initialState: users = {
             username:"AungNyi",
             password:"accmobile",
             email:"",
-            age:""
+            age:"",
+            totalMoney:"",
+            money:0,
+            type_:""
         }
     ]
 };
@@ -115,5 +124,5 @@ export const movieSlice = createSlice({
 
 export const { addUsers } = movieSlice.actions;
 export const selectUser = (state: RootState) => state.user.users;
-export const selectUserById =  (state: RootState,userId:string) => state.user.users.filter(user=>user._id ==userId)[0];
+export const selectUserById =  (state: RootState,_id:string) => state.user.users.filter(user=>user._id ==_id)[0];
 export default movieSlice.reducer;

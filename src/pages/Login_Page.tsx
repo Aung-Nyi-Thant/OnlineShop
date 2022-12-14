@@ -71,7 +71,6 @@ import "./MovieListPagestyle.css"
 import React, {useEffect, useState} from "react";
 import {Modal} from "react-bootstrap";
 import {Form, Formik} from "formik";
-import * as Yup from 'yup';
 import Swal from 'sweetalert2';
 
 import {useDispatch} from "react-redux";
@@ -81,54 +80,7 @@ import LoginPage from "../features/Login/LoginUi";
 import { Link, useNavigate } from "react-router-dom";
 import { Personal_page } from "./Personal_page";
 import axios from "axios";
-
-const UsersForm = (props:any)=>{
-    let dispatch = useAppDispatch();
-    let users = props.movie;
-    console.log('Edit movie ',users);
-    let handleClose = props.handleClose;
-    let initValues ={
-        _id : users? users._id:'',
-        username: users? users.username:'',
-        password: users? users.password:'',
-        email:users? users.email:'',
-        age:users? users.age:''
-    }
-    return (<div>
-        
-        <Formik
-            initialValues={initValues}
-            onSubmit={values => {
-                // same shape as initial values
-                //console.log("Handle Close ", handleClose);
-                console.log(values);
-
-                if (!users)//save
-                {
-                    let login_users: Users = {
-                        // title: values.title,
-                        // year: Number(values.year),
-                        // image_adress:values.image_adress,
-                        // background_img:values.background_img,
-                        // color:values.color,
-                        // summary:values.summary
-                        _id:values._id,
-                        username: values.username,
-                        password: values.password,
-                        email:"",
-                        age:values.age
-                    }
-
-                    console.log('Movie ', login_users);
-                    dispatch(login(login_users));
-                }
-                handleClose();
-            }}
-        >
-        </Formik>
-
-    </div>);
-};
+import { number } from "yup";
 export default function MovieListPage() {
     const dispatch = useAppDispatch();
     useEffect(()=>{
@@ -156,9 +108,6 @@ render(){
                     <Modal.Title>{editMovie?'Update Movie':'New Movie'}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                   <UsersForm handleClose={handleClose}
-                              movie ={editMovie}
-                             />
 
                 </Modal.Body>
                 {/*<Modal.Footer>
@@ -193,23 +142,44 @@ render(){
            let onClick = ()=>{
             var User_name = (document.getElementById("Username_input") as HTMLInputElement).value;
                var Password = (document.getElementById("Password_input") as HTMLInputElement).value;
+               console.log(Password)
+               Password =  String(stringToHash(Password))
                let User_login: User1 = {
                    userName:User_name,
                    password:Password,
                    email:"",
-                   age:""
+                   age:"",
+                   totalMoney:"",
+                   money:0,
+                   type_:""
                }
+               function stringToHash(string:any) {
+                var hash = 0;
+                if (string.length == 0) return hash;
+                  
+                for (let i = 0; i < string.length; i++) {
+                    let char = string.charCodeAt(i);
+                    hash = ((hash << 5) - hash) + char;
+                    hash = hash & hash;
+                }
+                  
+                return hash;
+            }
+            console.log(stringToHash("username001"))
                for (let i =0; i < users.length; i++){
+                let UserPassword =users[i].password
                    if(users[i].username==User_login.userName){
                        console.log("Username is",users[i].username)
                        let Username_ = users[i].username
                        console.log(typeof(Username_))
+                       console.log("UserPassowrd",UserPassword)
+                       console.log("Password",Password)
                        if(User_login.userName == "Aung Nyi Thant" && User_login.password=="accmobile"){
                         navigate(`/${users[i].username}/home`)
                        }
-                       else if(users[i].password == User_login.password){
+                       else if(UserPassword == Password){
                            navigate(`/${users[i].username}/home`)
-                       }else{
+                       }else if(i == users.length){
                        this.setState({Message:"Username or Password Wrong"})
                        }
                    }

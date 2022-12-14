@@ -10,6 +10,11 @@
     border-radius: 5px;
 }
 
+.MainFoodList {
+    background-color: #fbfbfb;
+    width: 1440px;
+}
+
 .animation {
     width: 400px;
     background-color: aquamarine;

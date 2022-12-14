@@ -44,6 +44,7 @@ export default function Shop_Page(){
             user= "User"
         }
     }
+
     if(user != "User"){
         navigate('/')
     }
@@ -62,6 +63,10 @@ export default function Shop_Page(){
             Gamming.push(Foods[i])
         }
     }
+    let row = 40 / 4
+    let hight = row * 420
+    console.log("Height=>>",hight)
+    console.log("Foods_ length",Foods_.length)
     let Foods_may: Food[] =[]
     console.log("Function Run")
     console.log(Foods)
@@ -92,7 +97,7 @@ class Shop_Page_ extends Component{
     }
     render(){
         return(
-            <div>
+            <div style={{backgroundColor:"#fbfbfb"}}>
                 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
 <meta name='viewport' content='width=device-width, initial-scale=1'></meta>
@@ -143,7 +148,7 @@ class Shop_Page_ extends Component{
                 navigate(`/${Username}/message`)
             }}></i>
             <div className="profile" onClick={()=>{
-                navigate(`/:Id/profile`)
+                navigate(`/${Username}/profile`)
             }}>
 
             </div>
@@ -242,7 +247,7 @@ class Shop_Page_ extends Component{
         }}><i className='fas fa-gamepad' style={{fontSize:"26px"}}></i></button>
     </div>
     </div>
-    
+    <div className="MainFoodList" style={{height:hight}}>
             {
                 this.state.Food.map((food:Food)=>
                     <FoodUI
@@ -250,6 +255,7 @@ class Shop_Page_ extends Component{
                         />
                 )
             }
+            </div>
             </div>
         )
     }
