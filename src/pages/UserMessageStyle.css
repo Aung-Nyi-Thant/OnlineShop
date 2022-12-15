@@ -1,0 +1,30 @@
+.FoodNameForProfile {
+    font-family: Copperplate;
+    margin: 0px 0;
+    float: left;
+    margin-left: 30px;
+}
+
+.CountForProfile {
+    font-family: Copperplate;
+    margin: 0px 0;
+    float: left;
+    margin-left: 120px;
+}
+
+.CostForProfile_ {
+    font-family: Copperplate;
+    margin: 0px 0;
+    float: left;
+    margin-left: 160px;
+    margin-right: 80px;
+}
+
+.MainMessages {
+    margin-top: 10px;
+}
+
+.DateForProfile_ {
+    font-family: Copperplate;
+    margin: 0px 0;
+}

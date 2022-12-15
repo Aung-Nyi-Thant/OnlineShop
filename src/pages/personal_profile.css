@@ -57,10 +57,6 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-#h4 {
-    margin: 0px 0;
-}
-
 .Imformation {
     width: 800px;
     height: 400px;
@@ -96,6 +92,7 @@
     width: 800px;
     height: 70px;
     background-color: #eff0f0;
+    margin-bottom: 30px;
 }
 
 .MessageText {
@@ -111,6 +108,70 @@
     padding-top: 20px;
     float: left;
     transition: 1s;
+}
+
+.OrderNumber {
+    margin: 0px 0;
+    font-family: Courier;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.Ordered {
+    margin: 0px 0;
+    font-family: Courier;
+    float: left;
+    margin-left: 230px;
+    margin-bottom: 20px;
+}
+
+.ThingName {
+    font-family: Courier;
+    margin: 0px 0;
+    float: left;
+    margin-left: 30px;
+}
+
+.Count_forProfile {
+    font-family: Courier;
+    margin: 0px 0;
+    float: left;
+    margin-left: 150px;
+}
+
+.CostForProfile {
+    font-family: Courier;
+    margin: 0px 0;
+    float: left;
+    margin-left: 120px;
+}
+
+.DateForProfile {
+    font-family: Courier;
+    margin: 0px 0;
+    margin-left: 170px;
+}
+
+.Paid {
+    margin: 0px 0;
+    font-family: Courier;
+    margin-left: 320px;
+    margin-bottom: 20px;
+}
+
+.NOPayMentsText {
+    margin-top: 110px;
+    font-family: Courier;
+}
+
+.NoMessageText {
+    margin-top: 110px;
+    font-family: Courier;
+}
+
+.UserMoney_ {
+    padding-top: 120px;
 }
 
 .Money {

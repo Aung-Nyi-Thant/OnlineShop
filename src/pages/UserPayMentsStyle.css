@@ -1,0 +1,27 @@
+.OrderId_text {
+    font-family: Browallia New;
+    margin: 0px 0;
+    float: left;
+    margin-right: 80px;
+    margin-left: 30px;
+}
+
+.Ordered_text {
+    font-family: Browallia New;
+    margin: 0px 0;
+    float: left;
+    margin-right: 120px;
+    margin-left: 80px;
+}
+
+.MainPayMent {
+    margin-right: 70px;
+    width: 800px;
+    padding-right: 120px;
+    margin-top: 15px;
+}
+
+.Paid_text {
+    font-family: Browallia New;
+    margin: 0px 0;
+}

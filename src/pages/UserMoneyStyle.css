@@ -1,0 +1,17 @@
+.Money_ {
+    margin: 0px 0;
+    font-family: Courier;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.TotalMoney {
+    margin: 0px 0;
+    font-family: Courier;
+}
+
+.UserMoneyMainDiv {
+    width: 800px;
+    height: 400px;
+    padding-top: 30px;
+}

@@ -14,7 +14,6 @@ import { apiGetAllUsers, selectUser } from "../features/Login/UsersSlice";
 export default function Shop_Page(){
     const dispatch = useAppDispatch();
     let navigate = useNavigate();
-    let Foods_list: Food[]=[]
     let {Username} = useParams();
     let home = `/${Username}/home`;
     let movie_list = `/${Username}/movie-list`

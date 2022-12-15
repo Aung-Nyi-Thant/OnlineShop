@@ -6,6 +6,7 @@ import reviewReducer from '../features/review/reviewSlice';
 import usersReducer from "../features/Login/UsersSlice"
 import foodsReducer from "../Shop/ShopSlice"
 import messageReducer from"../message/messageSlice"
+import PayMentReducer from "../features/PayMents/PayMentsSlice"
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
@@ -14,7 +15,8 @@ export const store = configureStore({
     review : reviewReducer,
     user: usersReducer,
     food: foodsReducer,
-    message:messageReducer
+    message:messageReducer,
+    payMent:PayMentReducer
   },
 });
 

@@ -9,18 +9,25 @@ import UserMessage from "./UserMessage";
 import UserMoney from "./UserMoney";
 import UserPayMents from "./UserPayMents";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { Users,selectUserById, selectUser,apiGetAllUsers, User1 } from "../features/Login/UsersSlice"
+import { selectUser,apiGetAllUsers, User1 } from "../features/Login/UsersSlice"
 import "./personal_profile.css"
-import { AsyncThunkAction } from "@reduxjs/toolkit";
 import UserSetting from "./UserSetting";
+import { apiGetAllPayMent, PayMent, selectPayMents } from "../features/PayMents/PayMentsSlice";
+import { apiGetAllMessage, Message_, selectMessage } from "../message/messageSlice";
  export function Personal_page(){
     let {Username} = useParams();
     const navigate = useNavigate();
+
     const dispatch = useAppDispatch();
+
     useEffect(()=>{
-        dispatch(apiGetAllUsers())
+        dispatch(apiGetAllUsers());
+        dispatch(apiGetAllPayMent());
+        dispatch(apiGetAllMessage());
     },[]);
+    var messages = useAppSelector(selectMessage);
     const users = useAppSelector(selectUser);
+    var payMents  = useAppSelector(selectPayMents) 
     let User:User1 = {
         userName:"",
         password:"",
@@ -30,6 +37,7 @@ import UserSetting from "./UserSetting";
         money:0,
         type_:""
     }
+    let MessageIsNull = true
     for (let i = 0 ;i<users.length;i++){
         if(users[i].username == Username){
             User={
@@ -43,6 +51,36 @@ import UserSetting from "./UserSetting";
             }
         }
     }
+    let PayMentDisplay = ""
+    let PayMentTextDisplay = "none"
+    let PaymentIsNull = true
+    let UserPayMentsIteam:PayMent[] = []
+    for (let j = 0 ; j<payMents.length;j++){
+        if(payMents[j].username == User.userName){
+            UserPayMentsIteam.push(payMents[j])
+            PaymentIsNull = false
+        }
+    }
+    if(PaymentIsNull == true){
+        PayMentDisplay = "none"
+        PayMentTextDisplay = "" 
+    }
+    let UserMessageList :Message_[] = []
+    for (let i = 0;i < messages.length;i++){
+        if(messages[i].username == User.userName){
+            UserMessageList.push(messages[i])
+            MessageIsNull = false
+        }
+    }
+    let MessageDisplay = ""
+    let TextDisplay = "none"
+    if(MessageIsNull == true){
+        TextDisplay = ""
+        MessageDisplay ="none"
+    }
+    UserPayMentsIteam = UserPayMentsIteam.reverse()
+    console.log("UserMessage List",UserMessageList)
+    console.log("PayMEnts",UserPayMentsIteam)
     let Title ="Admin"
     let widths = "120px"
     let margin = "0px"
@@ -229,7 +267,9 @@ import UserSetting from "./UserSetting";
                 }}>
                     <h4 className="SettingText" style={{color:this.state.Setting_text}}>Settings</h4>
                 </div>
-                <div className="Logout">
+                <div className="Logout" onClick={()=>{
+                    navigate(`/`)
+                }}>
                 <i className="fa fa-power-off" style={{fontSize:"20px"}}></i>
                     <h4 className="LogoutText">Logout</h4>
                 </div>
@@ -239,10 +279,38 @@ import UserSetting from "./UserSetting";
                 totalMoney = {User.totalMoney}/>
                 </div>
                 <div className="UserMessage" style={{display:this.state.UserMessageDisplay}}>
-                    <UserMessage/>
+                    <h4 className="ThingName">Name</h4>
+                    <h4 className="Count_forProfile">Count</h4>
+                    <h4 className="CostForProfile">Cost</h4>
+                    <h4 className="DateForProfile">Date</h4>
+                    <h3 className="NoMessageText" style={{display:TextDisplay}}>No Messages</h3>
+                    <div style={{display : MessageDisplay}}>
+                {
+                UserMessageList.map((UserMessages:Message_)=>
+                    <UserMessage
+                        messages = {UserMessages}
+                        />
+                )
+                }
+                </div>
                 </div>
                 <div className="UserPayMents" style={{display:this.state.UserPayMentsDisplay}}>
-                    <UserPayMents/>
+                    <h4 className="OrderNumber">OrderNumber</h4>
+                    <h4 className="Ordered">Ordered</h4>
+                    <h4 className="Paid">Paid</h4>
+                    <h3 className="NOPayMentsText" style={{display:PayMentTextDisplay}}>
+                        No PayMents
+                    </h3>
+                <div className="PayMentsDiv" style={{display:PayMentDisplay}}>
+                {
+                UserPayMentsIteam.map((UserPayMent:PayMent)=>
+                    <UserPayMents
+                        User = {User}
+                    PayMents = {UserPayMent}
+                        />
+                )
+            }
+            </div>
                 </div>
                 <div className="UserSetting" style={{display:this.state.UserSettingDisplay}}>
                     <UserSetting/>
