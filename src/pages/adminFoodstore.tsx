@@ -1,38 +1,35 @@
-import React from "react";
-import {selectMovie} from "../features/movie/movieSlice"
-import {useAppDispatch, useAppSelector} from "../app/hooks";
-import{Users} from "../features/Login/UsersSlice";
+import {useAppDispatch} from "../app/hooks";
 import "./adminFoodstorestyle.css"
 import {apiSaveFood, Food} from"../Shop/ShopSlice"
 import "./HomePage.css"
 import {
     useParams,
     useNavigate,
-    useLocation,
-    Link,
 } from "react-router-dom";
 import { getAllMovie } from "../features/movie/movieApi";
-import { url } from "inspector";
+// import { link } from "fs";
 
 export default function AdmStore() {
     let dispatch = useAppDispatch()
     let resonse = getAllMovie()
     let {Username} = useParams();
+    let Title ="Admin"
+    let widths = "120px"
+    let margin = "0px"
+    if (Username !== "Aung Nyi Thant"){
+        Title="BILLIONER"
+        widths ="146px"
+        margin = "6px"
+    }
     console.log("movies are",resonse["PromiseResult"])
     let navigate = useNavigate();
-    let home = `/${Username}/home`;
     let movie_list = `/${Username}/movie-list`
-    let profile = `/${Username}/profile`
     let shop = `/${Username}/shop`
     console.log("Username is",Username)
-    var date = new Date();
-	var current_date = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate();
-    let year = current_date.slice(0,4)
-    let month = current_date.slice(5,7).replace("-","")
-    var i = 0;
     return <div>
         <div className={"Foodlist"}>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
 <meta name='viewport' content='width=device-width, initial-scale=1'></meta>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossOrigin='anonymous'></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
@@ -43,7 +40,7 @@ export default function AdmStore() {
         <ul className="navbar-nav mr-auto">
             <div className={"home"}>
         <li className="nav-item active">
-            <div>
+            <div >
             <li className="w3-xxlarge">
                 <i className="fa fa-home"></i></li>
                 </div>
@@ -53,29 +50,39 @@ export default function AdmStore() {
             <li className="nav-item active">
             <div className={"ProfileIcon"}>
             <li className="w3-xxlarge">
-                <i className="material-icons w3-xxlarge" onClick={()=>{
+                <i className="fa fa-bitcoin" onClick={()=>{
                     navigate(movie_list)
-                }}>menu</i></li>
+                }}></i></li>
                 </div>
             </li>
             </li>
             <li className="nav-item active">
             <li className="nav-item active">
-            <div className={"ProfileIcon"} onClick={()=>{ navigate(shop)}}>
+            <div className={"ProfileIcon_Shop"} onClick={()=>{ navigate(shop)}}>
             <li>
             <i className='fa-solid fa-shop'></i></li>
                 </div>
             </li>
             </li>
-            <div className={"Admin_title"}>
-            <h3 className={"Title__"}>Admin</h3>
+            <div className={"Admin_title"} style={{width:widths, boxShadow:"0 10px 10px 0 rgba(0, 0, 0, 0.2)"}} onClick={()=>{
+                if(Username === "Aung Nyi Thant"){
+                    navigate(`/admin/${Username}/shop`)
+                }
+            }}>
+            <h3 className={"Title__"} id={"title"} style={{marginLeft:margin}} >{Title}</h3>
             </div>
-            <i className='fas fa-comment-alt' style={{fontSize:"35px", marginTop:"13px"}} onClick={()=>{
+            {/* <div className={"Message"} onClick={()=>{
                 navigate("/Aung%20Nyi%20Thant/message")
+            }}><h4>M</h4></div> */}
+            <i className='fas fa-comment-alt' style={{fontSize:"35px" , marginTop:"10px"}} onClick={()=>{
+                navigate(`/${Username}/message`)
             }}></i>
-                        <div className="profile" onClick={()=>{
+            <div className="profile" onClick={()=>{
                 navigate(`/${Username}/profile`)
-            }}></div>
+            }}>
+
+            </div>
+            
             {/*{
             useAuthentication()
             && <li className="nav-item">
@@ -141,21 +148,21 @@ export default function AdmStore() {
                     var  madeInCountry= (document.getElementById("country") as HTMLInputElement).value;
                     var selectIndex = (document.getElementById('cars') as HTMLSelectElement);
                     let select = selectIndex.options[selectIndex.selectedIndex].value
-                    if(FoodName != ""){
+                    if(FoodName !== ""){
                         console.log("Step 1")
-                        if(FoodPrices!=""){
+                        if(FoodPrices!==""){
                             console.log("Step 2")
-                            if(FoodImage!=""){
+                            if(FoodImage!==""){
                                 console.log("Step 3")
-                                if(FoodAgeLimit!=""){
+                                if(FoodAgeLimit!==""){
                                     console.log("Step 4")
-                                    if(FoodTaste!=""){
+                                    if(FoodTaste!==""){
                                         console.log("Step 5")
-                                        if(FoodBrand!=""){
+                                        if(FoodBrand!==""){
                                             console.log("Step 6")
-                                            if(expire_date!=""){
+                                            if(expire_date!==""){
                                                 console.log("Step 7")
-                                                if(madeInCountry!=""){
+                                                if(madeInCountry!==""){
                                                     console.log(select)
                                                     console.log("Step 8")
                                                     let age = FoodAgeLimit+"_"

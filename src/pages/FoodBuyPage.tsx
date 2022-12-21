@@ -16,36 +16,35 @@ export default function BuyTheFood(){
     let price = food.Prices
     let Price_replace = price.replace("$","")
     let Price_int = parseInt(Price_replace)
-    let home = `/${Username}/home`;
     let movie_list = `/${Username}/movie-list`
     let shop = `/${Username}/shop`
     let Title = "Admin"
     let widths = "120px"
     let margin = "0px"
     let cost = 0
-    if (Username != "Aung Nyi Thant"){
+    if (Username !== "Aung Nyi Thant"){
         Title="BILLIONER"
         widths ="146px"
         margin = "6px"
     }
     useEffect(()=>{
         dispatch(apiGetAllUsers())
-    },[]);
+    });
     var users = useAppSelector(selectUser) 
     let user = ""
     for(let i = 0 ; i <users.length;i++){
-        if(users[i].username == Username){
+        if(users[i].username === Username){
             user= "User"
         }
     }
-    if(user != "User"){
+    if(user !== "User"){
         navigate('/')
     }
-    if(count == undefined){
+    if(count === undefined){
         BuyTheFood()
-    }else if(count != undefined){
+    }else if(count !== undefined){
         console.log(Username)
-        if(Username == "Aung Nyi Thant"){
+        if(Username === "Aung Nyi Thant"){
             cost = 0
         }else{
             let counts = Number(count)
@@ -55,7 +54,7 @@ export default function BuyTheFood(){
 
         return(
             <div>
-                <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+                            <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
 <meta name='viewport' content='width=device-width, initial-scale=1'></meta>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossOrigin='anonymous'></script>
@@ -67,7 +66,7 @@ export default function BuyTheFood(){
         <ul className="navbar-nav mr-auto">
             <div className={"home"}>
         <li className="nav-item active">
-            <div>
+            <div >
             <li className="w3-xxlarge">
                 <i className="fa fa-home"></i></li>
                 </div>
@@ -77,28 +76,26 @@ export default function BuyTheFood(){
             <li className="nav-item active">
             <div className={"ProfileIcon"}>
             <li className="w3-xxlarge">
-                <i className="material-icons w3-xxlarge" onClick={()=>{
+                <i className="fa fa-bitcoin" onClick={()=>{
                     navigate(movie_list)
-                }}>menu</i></li>
+                }}></i></li>
                 </div>
             </li>
             </li>
             <li className="nav-item active">
             <li className="nav-item active">
-            <div className={"ProfileIcon"} onClick={()=>{ navigate(shop)}}>
+            <div className={"ProfileIcon_Shop"} onClick={()=>{ navigate(shop)}}>
             <li>
             <i className='fa-solid fa-shop'></i></li>
                 </div>
             </li>
             </li>
             <div className={"Admin_title"} style={{width:widths, boxShadow:"0 10px 10px 0 rgba(0, 0, 0, 0.2)"}} onClick={()=>{
-                if(Username != "Aung Nyi Thant"){
-                    //nothing do
-                }else{
+                if(Username === "Aung Nyi Thant"){
                     navigate(`/admin/${Username}/shop`)
                 }
             }}>
-            <h3 className={"Title__"} style={{marginLeft:margin}}>{Title}</h3>
+            <h3 className={"Title__"} id={"title"} style={{marginLeft:margin}} >{Title}</h3>
             </div>
             {/* <div className={"Message"} onClick={()=>{
                 navigate("/Aung%20Nyi%20Thant/message")
@@ -106,9 +103,11 @@ export default function BuyTheFood(){
             <i className='fas fa-comment-alt' style={{fontSize:"35px" , marginTop:"10px"}} onClick={()=>{
                 navigate(`/${Username}/message`)
             }}></i>
-                        <div className="profile" onClick={()=>{
-                navigate(`/:Id/profile`)
-            }}></div>
+            <div className="profile" onClick={()=>{
+                navigate(`/${Username}/profile`)
+            }}>
+
+            </div>
             
             {/*{
             useAuthentication()

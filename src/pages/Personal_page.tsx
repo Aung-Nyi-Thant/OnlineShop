@@ -2,8 +2,6 @@ import React, { useEffect } from "react"
 import {
     useParams,
     useNavigate,
-    useLocation,
-    Link,
 } from "react-router-dom";
 import UserMessage from "./UserMessage";
 import UserMoney from "./UserMoney";
@@ -24,7 +22,7 @@ import { apiGetAllMessage, Message_, selectMessage } from "../message/messageSli
         dispatch(apiGetAllUsers());
         dispatch(apiGetAllPayMent());
         dispatch(apiGetAllMessage());
-    },[]);
+    });
     var messages = useAppSelector(selectMessage);
     const users = useAppSelector(selectUser);
     var payMents  = useAppSelector(selectPayMents) 
@@ -39,7 +37,7 @@ import { apiGetAllMessage, Message_, selectMessage } from "../message/messageSli
     }
     let MessageIsNull = true
     for (let i = 0 ;i<users.length;i++){
-        if(users[i].username == Username){
+        if(users[i].username === Username){
             User={
                 userName : users[i].username,
                 password: users[i].password,
@@ -56,25 +54,26 @@ import { apiGetAllMessage, Message_, selectMessage } from "../message/messageSli
     let PaymentIsNull = true
     let UserPayMentsIteam:PayMent[] = []
     for (let j = 0 ; j<payMents.length;j++){
-        if(payMents[j].username == User.userName){
+        if(payMents[j].username === User.userName){
             UserPayMentsIteam.push(payMents[j])
             PaymentIsNull = false
         }
     }
-    if(PaymentIsNull == true){
+    if(PaymentIsNull === true){
         PayMentDisplay = "none"
         PayMentTextDisplay = "" 
     }
     let UserMessageList :Message_[] = []
     for (let i = 0;i < messages.length;i++){
-        if(messages[i].username == User.userName){
+        if(messages[i].username === User.userName){
             UserMessageList.push(messages[i])
             MessageIsNull = false
         }
     }
+    UserMessageList = UserMessageList.reverse()
     let MessageDisplay = ""
     let TextDisplay = "none"
-    if(MessageIsNull == true){
+    if(MessageIsNull === true){
         TextDisplay = ""
         MessageDisplay ="none"
     }
@@ -84,15 +83,12 @@ import { apiGetAllMessage, Message_, selectMessage } from "../message/messageSli
     let Title ="Admin"
     let widths = "120px"
     let margin = "0px"
-    let RunCount = 0
-    if (Username != "Aung Nyi Thant"){
+    if (Username !== "Aung Nyi Thant"){
         Title="BILLIONER"
         widths ="146px"
         margin = "6px"
     }
-    let home = `/${Username}/home`;
     let movie_list = `/${Username}/movie-list`
-    let profile = `/${Username}/profile`
     let shop = `/${Username}/shop`
     class Profile extends React.Component {
         state = {
@@ -112,7 +108,7 @@ import { apiGetAllMessage, Message_, selectMessage } from "../message/messageSli
         render() {
           return (
             <div className={"main_profile"}>
-                           <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+                                           <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
 <meta name='viewport' content='width=device-width, initial-scale=1'></meta>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossOrigin='anonymous'></script>
@@ -134,22 +130,22 @@ import { apiGetAllMessage, Message_, selectMessage } from "../message/messageSli
             <li className="nav-item active">
             <div className={"ProfileIcon"}>
             <li className="w3-xxlarge">
-                <i className="material-icons w3-xxlarge" onClick={()=>{
+                <i className="fa fa-bitcoin" onClick={()=>{
                     navigate(movie_list)
-                }}>menu</i></li>
+                }}></i></li>
                 </div>
             </li>
             </li>
             <li className="nav-item active">
             <li className="nav-item active">
-            <div className={"ProfileIcon"} onClick={()=>{ navigate(shop)}}>
+            <div className={"ProfileIcon_Shop"} onClick={()=>{ navigate(shop)}}>
             <li>
             <i className='fa-solid fa-shop'></i></li>
                 </div>
             </li>
             </li>
             <div className={"Admin_title"} style={{width:widths, boxShadow:"0 10px 10px 0 rgba(0, 0, 0, 0.2)"}} onClick={()=>{
-                if(Username == "Aung Nyi Thant"){
+                if(Username === "Aung Nyi Thant"){
                     navigate(`/admin/${Username}/shop`)
                 }
             }}>
@@ -162,7 +158,7 @@ import { apiGetAllMessage, Message_, selectMessage } from "../message/messageSli
                 navigate(`/${Username}/message`)
             }}></i>
             <div className="profile" onClick={()=>{
-                navigate(`/:Id/profile`)
+                navigate(`/${Username}/profile`)
             }}>
 
             </div>
@@ -268,6 +264,7 @@ import { apiGetAllMessage, Message_, selectMessage } from "../message/messageSli
                     <h4 className="SettingText" style={{color:this.state.Setting_text}}>Settings</h4>
                 </div>
                 <div className="Logout" onClick={()=>{
+                    localStorage.clear()
                     navigate(`/`)
                 }}>
                 <i className="fa fa-power-off" style={{fontSize:"20px"}}></i>

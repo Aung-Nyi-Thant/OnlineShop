@@ -1,33 +1,26 @@
 import { Component } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
-import React, {useEffect, useState} from "react";
-import { apiGetAllFood, Food, Foods, selectFood } from "../Shop/ShopSlice";
-import { render } from "@testing-library/react";
+import {useEffect} from "react";
+import { apiGetAllFood, Food, selectFood } from "../Shop/ShopSlice";
 import FoodUI from "../Shop/FoodShopUI";
 import "./ShopPageStyle.css"
-import { DeleteFood } from "../Shop/ShopApi";
-import { apiGetAllMessage, Message_, selectMessage } from "../message/messageSlice";
-import { saveMessage } from "../message/messageApi";
 import { apiGetAllUsers, selectUser } from "../features/Login/UsersSlice";
 
 export default function Shop_Page(){
     const dispatch = useAppDispatch();
     let navigate = useNavigate();
     let {Username} = useParams();
-    let home = `/${Username}/home`;
     let movie_list = `/${Username}/movie-list`
-    let profile = `/${Username}/profile`
     let shop = `/${Username}/shop`
     useEffect(()=>{
         dispatch(apiGetAllFood());
         dispatch(apiGetAllUsers())
-    },[]);
+    });
     let Title ="Admin"
     let widths = "120px"
     let margin = "0px"
-    let RunCount = 0
-    if (Username != "Aung Nyi Thant"){
+    if (Username !== "Aung Nyi Thant"){
         Title="BILLIONER"
         widths ="146px"
         margin = "6px"
@@ -39,12 +32,12 @@ export default function Shop_Page(){
     var Foods = useAppSelector(selectFood);
     var users = useAppSelector(selectUser) 
     for(let i = 0 ; i <users.length;i++){
-        if(users[i].username == Username){
+        if(users[i].username === Username){
             user= "User"
         }
     }
 
-    if(user != "User"){
+    if(user !== "User"){
         navigate('/')
     }
     let Foods_: Food[] =[]
@@ -54,11 +47,11 @@ export default function Shop_Page(){
     let isSuit = false;
     let isGamming = false
     for (let i = 0 ; i<Foods.length;i++){
-        if(Foods[i].Ingredients == "SomeThing"){
+        if(Foods[i].Ingredients === "SomeThing"){
             Foods_.push(Foods[i])
-        }else if(Foods[i].Ingredients == "suit"){
+        }else if(Foods[i].Ingredients === "suit"){
             Suit.push(Foods[i])
-        }else if(Foods[i].Ingredients == "Gamming"){
+        }else if(Foods[i].Ingredients === "Gamming"){
             Gamming.push(Foods[i])
         }
     }
@@ -119,22 +112,22 @@ class Shop_Page_ extends Component{
             <li className="nav-item active">
             <div className={"ProfileIcon"}>
             <li className="w3-xxlarge">
-                <i className="material-icons w3-xxlarge" onClick={()=>{
+                <i className="fa fa-bitcoin" onClick={()=>{
                     navigate(movie_list)
-                }}>menu</i></li>
+                }}></i></li>
                 </div>
             </li>
             </li>
             <li className="nav-item active">
             <li className="nav-item active">
-            <div className={"ProfileIcon"} onClick={()=>{ navigate(shop)}}>
+            <div className={"ProfileIcon_Shop"} onClick={()=>{ navigate(shop)}}>
             <li>
             <i className='fa-solid fa-shop'></i></li>
                 </div>
             </li>
             </li>
             <div className={"Admin_title"} style={{width:widths, boxShadow:"0 10px 10px 0 rgba(0, 0, 0, 0.2)"}} onClick={()=>{
-                if(Username == "Aung Nyi Thant"){
+                if(Username === "Aung Nyi Thant"){
                     navigate(`/admin/${Username}/shop`)
                 }
             }}>
@@ -175,48 +168,45 @@ class Shop_Page_ extends Component{
       <i className="fa fa-search"></i>
       <input type="text" className="form-control form-input" placeholder="Search anything..." onChange={(e)=>{
         let value = e.target.value
-        if(value != ""){
-            if(isFood == true){
+        if(value !== ""){
+            if(isFood === true){
                 Foods_may=[]
             Foods_.forEach( (e) =>{
                 const isVillable = e.Food_name.toLowerCase().includes(value.toLowerCase())
-                if(isVillable == true ){
-                    let count = Foods_may.length
+                if(isVillable === true ){
                     Foods_may.push(e)
                     this.serchClick(Foods_may)
                     console.log("e is",Foods_may)
                 }
             })
             }
-            else if(isSuit == true){
+            else if(isSuit === true){
                 Foods_may=[]
             Suit.forEach( (e) =>{
                 const isVillable = e.Food_name.toLowerCase().includes(value.toLowerCase())
-                if(isVillable == true ){
-                    let count = Foods_may.length
+                if(isVillable === true ){
                     Foods_may.push(e)
                     this.serchClick(Foods_may)
                     console.log("e is",Foods_may)
                 }
             })
             }
-            else if(isGamming == true){
+            else if(isGamming === true){
                 Foods_may=[]
             Gamming.forEach( (e) =>{
                 const isVillable = e.Food_name.toLowerCase().includes(value.toLowerCase())
-                if(isVillable == true ){
-                    let count = Foods_may.length
+                if(isVillable === true ){
                     Foods_may.push(e)
                     this.serchClick(Foods_may)
                     console.log("e is",Foods_may)
                 }
             })
             }
-        }else if(isFood == true){
+        }else if(isFood === true){
             this.serchClick(Foods_)
-        }else if(isSuit == true){
+        }else if(isSuit === true){
             this.serchClick(Suit)
-        }else if(isGamming == true){
+        }else if(isGamming === true){
             this.serchClick(Gamming)
         }
     }
@@ -259,7 +249,6 @@ class Shop_Page_ extends Component{
         )
     }
 }
-return(
-    <Shop_Page_/>
-)
+return <Shop_Page_/>
+
 }

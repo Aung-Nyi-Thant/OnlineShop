@@ -97,7 +97,11 @@ button {
 
 .ProfileIcon {
     margin-left: 20px;
-    margin-top: 5px;
+}
+
+.ProfileIcon_Shop {
+    margin-left: 20px;
+    margin-top: 8px;
 }
 
 .home {

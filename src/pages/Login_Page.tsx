@@ -98,6 +98,34 @@ export default function MovieListPage() {
     const btnLogin = (code:any) => {
         dispatch(code)
 }
+function stringToHash(string:any) {
+    var hash = 0;
+    if (string.length == 0) return hash;
+      
+    for (let i = 0; i < string.length; i++) {
+        let char = string.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash;
+    }
+      
+    return hash;
+}
+var User_name = ""
+var Password = ""
+console.log(Password)
+console.log(Password)
+console.log()
+localStorage.getItem("Username")
+if(localStorage.getItem("Username") != null){
+    console.log("Is not null")
+    if (localStorage.getItem("Username") == ""){
+        //nothing
+    }else{
+        User_name = localStorage.getItem("Username")!
+        Password = localStorage.getItem("Password")!
+        navigate(`/${User_name}/shop`)
+    }
+}
 class Login__ extends React.Component{
     state={Message:""}
 render(){
@@ -140,10 +168,9 @@ render(){
        <h6 className={"Errormessage"}>{this.state.Message}</h6>
        <button  className={"Login_button"} id={'btn'} onClick={()=>{
            let onClick = ()=>{
-            var User_name = (document.getElementById("Username_input") as HTMLInputElement).value;
-               var Password = (document.getElementById("Password_input") as HTMLInputElement).value;
-               console.log(Password)
-               Password =  String(stringToHash(Password))
+             User_name = (document.getElementById("Username_input") as HTMLInputElement).value;
+             Password = (document.getElementById("Password_input") as HTMLInputElement).value;
+             Password =  String(stringToHash(Password))
                let User_login: User1 = {
                    userName:User_name,
                    password:Password,
@@ -153,18 +180,6 @@ render(){
                    money:0,
                    type_:""
                }
-               function stringToHash(string:any) {
-                var hash = 0;
-                if (string.length == 0) return hash;
-                  
-                for (let i = 0; i < string.length; i++) {
-                    let char = string.charCodeAt(i);
-                    hash = ((hash << 5) - hash) + char;
-                    hash = hash & hash;
-                }
-                  
-                return hash;
-            }
             console.log(stringToHash("username001"))
                for (let i =0; i < users.length; i++){
                 let UserPassword =users[i].password
@@ -178,6 +193,9 @@ render(){
                         navigate(`/${users[i].username}/home`)
                        }
                        else if(UserPassword == Password){
+                            localStorage.setItem("Username",User_login.userName)
+                            localStorage.setItem("Password", Password)
+                            console.log("Username ===>",localStorage.getItem("Username"))
                            navigate(`/${users[i].username}/home`)
                        }else if(i == users.length){
                        this.setState({Message:"Username or Password Wrong"})
