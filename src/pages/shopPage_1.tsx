@@ -16,7 +16,7 @@ export default function Shop_Page(){
     useEffect(()=>{
         dispatch(apiGetAllFood());
         dispatch(apiGetAllUsers())
-    });
+    },[]);
     let Title ="Admin"
     let widths = "120px"
     let margin = "0px"
@@ -136,9 +136,6 @@ class Shop_Page_ extends Component{
             {/* <div className={"Message"} onClick={()=>{
                 navigate("/Aung%20Nyi%20Thant/message")
             }}><h4>M</h4></div> */}
-            <i className='fas fa-comment-alt' style={{fontSize:"35px" , marginTop:"10px"}} onClick={()=>{
-                navigate(`/${Username}/message`)
-            }}></i>
             <div className="profile" onClick={()=>{
                 navigate(`/${Username}/profile`)
             }}>
@@ -249,6 +246,6 @@ class Shop_Page_ extends Component{
         )
     }
 }
-return <Shop_Page_/>
+return (<Shop_Page_/>)
 
 }

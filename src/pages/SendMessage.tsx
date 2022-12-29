@@ -183,9 +183,7 @@ export default function SendMessage(){
             {/* <div className={"Message"} onClick={()=>{
                 navigate("/Aung%20Nyi%20Thant/message")
             }}><h4>M</h4></div> */}
-            <i className='fas fa-comment-alt' style={{fontSize:"35px" , marginTop:"10px"}} onClick={()=>{
-                navigate(`/${Username}/message`)
-            }}></i>
+
                         <div className="profile" onClick={()=>{
                 navigate(`/${Username}/profile`)
             }}></div>

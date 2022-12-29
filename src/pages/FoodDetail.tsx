@@ -91,7 +91,7 @@ export default function FoodDetailsPage(props:any) {
         <ul className="navbar-nav mr-auto">
             <div className={"home"}>
         <li className="nav-item active">
-            <div>
+            <div >
             <li className="w3-xxlarge">
                 <i className="fa fa-home"></i></li>
                 </div>
@@ -101,38 +101,35 @@ export default function FoodDetailsPage(props:any) {
             <li className="nav-item active">
             <div className={"ProfileIcon"}>
             <li className="w3-xxlarge">
-                <i className="material-icons w3-xxlarge" onClick={()=>{
+                <i className="fa fa-bitcoin" onClick={()=>{
                     navigate(movie_list)
-                }}>menu</i></li>
+                }}></i></li>
                 </div>
             </li>
             </li>
             <li className="nav-item active">
             <li className="nav-item active">
-            <div className={"ProfileIcon"} onClick={()=>{ navigate(shop)}}>
+            <div className={"ProfileIcon_Shop"} onClick={()=>{ navigate(shop)}}>
             <li>
             <i className='fa-solid fa-shop'></i></li>
                 </div>
             </li>
             </li>
             <div className={"Admin_title"} style={{width:widths, boxShadow:"0 10px 10px 0 rgba(0, 0, 0, 0.2)"}} onClick={()=>{
-                if(Username != "Aung Nyi Thant"){
-                    //nothing do
-                }else{
+                if(Username === "Aung Nyi Thant"){
                     navigate(`/admin/${Username}/shop`)
                 }
             }}>
-            <h3 className={"Title__"} style={{marginLeft:margin}}>{Title}</h3>
+            <h3 className={"Title__"} id={"title"} style={{marginLeft:margin}} >{Title}</h3>
             </div>
             {/* <div className={"Message"} onClick={()=>{
                 navigate("/Aung%20Nyi%20Thant/message")
             }}><h4>M</h4></div> */}
-            <i className='fas fa-comment-alt' style={{fontSize:"35px" , marginTop:"10px"}} onClick={()=>{
-                navigate(`/${Username}/message`)
-            }}></i>
-                        <div className="profile" onClick={()=>{
-                navigate(`/:Id/profile`)
-            }}></div>
+            <div className="profile" onClick={()=>{
+                navigate(`/${Username}/profile`)
+            }}>
+
+            </div>
             
             {/*{
             useAuthentication()
