@@ -1,0 +1,78 @@
+.MainDivInCurrency {
+    width: 1440px;
+    height: 750px;
+    background-image: url('https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174066__340.png');
+    background-size: 1440px 750px;
+    padding-top: 120px;
+}
+
+.TitleOfCurrency {
+    font-family: Arial Rounded MT Bold;
+    color: white;
+    letter-spacing: 2px;
+    margin: 0px 0;
+}
+
+.currencyInput {
+    width: 330px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    padding-left: 15px;
+}
+
+.DivForCurrencyInput {
+    width: 500px;
+    height: 60px;
+    background-color: rgb(229, 223, 223);
+    opacity: 0.8;
+    border-radius: 40px;
+    padding-top: 10px;
+    padding-right: 1px;
+    margin-left: 50px;
+    margin-left: 500px;
+    margin-top: 120px;
+}
+
+.BuyBtnForCurrencyPage {
+    margin-left: 60px;
+    height: 40px;
+    width: 90px;
+    border-radius: 20px;
+    border: 1px solid #426fd7;
+    color: #436ed2;
+}
+
+.BuyBtnForCurrencyPage:hover {
+    background-color: #3358ad;
+    color: white;
+}
+
+.LoadingBarForDiv {
+    width: 450px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: white;
+    margin-top: 35px;
+    margin-left: 25px;
+    padding-top: 5px;
+    padding-left: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2)
+}
+
+.LoadingBar {
+    width: 428px;
+    height: 20px;
+    border: 1px solid #1645f5;
+    background-color: white;
+    padding-top: 4px;
+    border-radius: 20px;
+    padding-left: 4px;
+}
+
+.RunningBar {
+    background-color: #1645f5;
+    height: 10px;
+    border-radius: 20px;
+}

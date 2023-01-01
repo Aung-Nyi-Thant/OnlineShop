@@ -113,7 +113,7 @@ class Shop_Page_ extends Component{
             <div className={"ProfileIcon"}>
             <li className="w3-xxlarge">
                 <i className="fa fa-bitcoin" onClick={()=>{
-                    navigate(movie_list)
+                    navigate(`/${Username}/currency`)
                 }}></i></li>
                 </div>
             </li>

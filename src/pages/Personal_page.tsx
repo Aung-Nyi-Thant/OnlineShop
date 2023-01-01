@@ -39,6 +39,7 @@ import { apiGetAllMessage, Message_, selectMessage } from "../message/messageSli
     for (let i = 0 ;i<users.length;i++){
         if(users[i].username === Username){
             User={
+                _id:users[i]._id,
                 userName : users[i].username,
                 password: users[i].password,
                 email:users[i].email,
@@ -90,6 +91,7 @@ import { apiGetAllMessage, Message_, selectMessage } from "../message/messageSli
     }
     let movie_list = `/${Username}/movie-list`
     let shop = `/${Username}/shop`
+    console.log("ID",User._id)
     class Profile extends React.Component {
         state = {
             Money:"white",
@@ -308,7 +310,7 @@ import { apiGetAllMessage, Message_, selectMessage } from "../message/messageSli
                 </div>
                 <div className="UserSetting" style={{display:this.state.UserSettingDisplay}}>
                     <UserSetting
-                    username = {Username}/>
+                    User = {User}/>
                 </div>
             </div>
         </div>

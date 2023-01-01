@@ -27,6 +27,7 @@ export function registerUser(users:User1){
 }
 export function UpdateAccount(users:Users){
     let id =users._id
+    console.log("Id" , id)
     let API2 = API_URL+"/users"+"/UpdateUser/"
     console.log("users is ",users)
     return axios.patch(API2+id,users);

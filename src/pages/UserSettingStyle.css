@@ -29,3 +29,54 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px;
     ;
 }
+
+.Email_In_Setting {
+    font-family: Gautami;
+    margin-right: 300px;
+    letter-spacing: 1.5px;
+}
+
+.EmailDiv {
+    padding-right: 190px;
+    margin-top: 30px;
+}
+
+.PasswordDiv {
+    padding-right: 290px;
+    margin-top: 30px;
+}
+
+.Password_In_Setting {
+    font-family: Gautami;
+    margin-right: 300px;
+    letter-spacing: 1.5px;
+}
+
+.Savebtn {
+    width: 80px;
+    border-radius: 5px;
+    border: 1px solid #106cf6;
+    background-color: white;
+    color: #106cf6;
+    margin-right: 20px;
+}
+
+.Savebtn:hover {
+    background-color: #106cf6;
+    color: white;
+}
+
+.Cancelbtn {
+    width: 80px;
+    border-radius: 5px;
+    border: 1px solid rgb(242, 51, 51);
+    background-color: white;
+    color: rgb(242, 51, 51);
+    margin-right: 545px;
+    margin-top: 60px;
+}
+
+.Cancelbtn:hover {
+    background-color: rgb(242, 51, 51);
+    color: white;
+}

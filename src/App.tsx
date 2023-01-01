@@ -40,6 +40,7 @@ import Reaload from './pages/reload';
 import Calculator from './pages/Calculator';
 import newPage from './pages/NewPage';
 import NewPage from './pages/NewPage';
+import Currency from './pages/currency';
 
 function App() {
   return (
@@ -72,7 +73,8 @@ function App() {
 
              </Route>
              <Route path="/:Username/message/comtand/sendMessage/:ID_" element={<SendMessage/>}>
-
+             </Route>
+             <Route path="/:Username/currency" element={<Currency/>}>
              </Route>
              <Route path="/:Username/movie-list" element={<MovieListPage/>}>
 
