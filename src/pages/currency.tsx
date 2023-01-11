@@ -20,7 +20,7 @@ export default function Currency(){
     class CurrencyClass extends Component{
         state = {
             widths:20,
-            display:"none"
+            realMoney:0
         } 
         render(){
             return(
@@ -96,7 +96,21 @@ export default function Currency(){
     <div className="MainDivInCurrency">
         <h1 className="TitleOfCurrency">Buy The Shopping Coins</h1>
         <div className="DivForCurrencyInput">
-        <input className="currencyInput" type={"number"} placeholder={"0$"}/>
+        <input className="currencyInput" type={"number"} placeholder={"0$"} onChange={(e)=>{
+            let money = e.target.value
+
+            if(money != ""){
+                let UImoney = Number(money)
+                let UImoney_String = String(UImoney+1)
+            this.setState({
+                realMoney:UImoney_String
+            })
+        }else{
+            this.setState({
+                realMoney:"0"
+            })
+        }
+        }}/>
         <button className="BuyBtnForCurrencyPage" onClick={async ()=>{
             this.setState({
                 display:""
@@ -104,22 +118,9 @@ export default function Currency(){
             function sleep(ms:number) {
                 return new Promise(resolve => setTimeout(resolve, ms));
             }
-        
-                for (let i = 0; i < 20; i++) {
-                    if(this.state.widths != 400){
-                    await sleep(i * 20);
-                    this.setState({
-                        widths:this.state.widths+20
-                    })
-                }
-                }
         }}>Buy</button>
-        <div className="LoadingBarForDiv" style={{display:this.state.display}}>
-            <div className="LoadingBar">
-                <div className="RunningBar" style={{width:`${this.state.widths}px`}}></div>
-            </div>
         </div>
-        </div>
+        <h5 className="YourPayMoneyText">You must pay me {this.state.realMoney}$</h5>
     </div>
         </div>
         )
