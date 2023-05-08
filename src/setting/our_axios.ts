@@ -1,7 +1,6 @@
-import {API_URL} from "../setting/API";
 //import useAuth from "../services/authService";
 const axios = require('axios');
-axios.defaults.headers.post['Content-Type'] = 'application/json';
+axios.defaults.headers.post['Content-Type'] = 's';
 let store:any;
 
 export const injectStore = (_store:any) => {

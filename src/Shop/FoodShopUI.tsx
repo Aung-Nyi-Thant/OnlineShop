@@ -47,7 +47,6 @@ export default function FoodUI (props:any) {
             like = this.state.food.like
         render(){
             return(
-            <div className="BackgroundColor_">
                 <div className={"MainFood"}>
             <div onClick={()=>{btnDetailHandler()}} className={"Image_view"}>
                 <img src={food.FoodImage} className={"img_food"} id = {"img"} style={{width:img_width,height:img_width}}/>
@@ -62,7 +61,7 @@ export default function FoodUI (props:any) {
                 <h5 className={"Year"}>Age : {age_perm}</h5> &nbsp;
             </div>
         
-        </div></div>)
+        </div>)
         }
     }
     return ((<FoodPage/>))}

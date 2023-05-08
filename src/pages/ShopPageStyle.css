@@ -13,6 +13,10 @@
 .MainFoodList {
     background-color: #fbfbfb;
     width: 1440px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .animation {
